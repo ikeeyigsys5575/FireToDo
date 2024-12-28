@@ -114,11 +114,29 @@ class TasksViewController: UITableViewController, ModalViewControllerDelegate {
                 if let error = error {
                     self.showAlert(title: "Error", message: "Could not delete task.")
                 } else {
-                    self.tasks.remove(at: indexPath.row)
-                    self.tableView.deleteRows(at: [indexPath], with: .fade)
+//                    self.tasks.remove(at: indexPath.row)
+//                    self.tableView.deleteRows(at: [indexPath], with: .fade)
                 }
             }
         }
+        
+        
+    }
+    
+    func toggleCompleteTask(indexPath: IndexPath) {
+        let task = tasks[indexPath.row]
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        
+        Firestore.firestore().collection("users").document(userId).collection("tasks").document(task.id).updateData([
+            "completed": !task.complete
+        ]) { error in
+            if let error = error {
+                print("Error adding task: \(error)")
+                self.showAlert(title: "Uh oh!", message: "Something went wrong while editing the task. Please try again later.")
+            } else {
+                print("Task successfully edited!")
+//                self.fetchTasks()
+            }        }
         
         
     }
@@ -207,6 +225,15 @@ class TasksViewController: UITableViewController, ModalViewControllerDelegate {
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
+    }
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let completeAction = UIContextualAction(style: .normal, title: "Toggle Complete") {
+            [weak self] (action, view, completionHandler) in
+            self?.toggleCompleteTask(indexPath: indexPath)
+            completionHandler(true)
+        }
+        return UISwipeActionsConfiguration(actions: [completeAction])
     }
     
 

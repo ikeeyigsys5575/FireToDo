@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         title = "Authenticate"
         
         db = Firestore.firestore()
+        
+        passwordTextField.text = ""
     }
     
     @IBAction func signUpButtonClicked(_ sender: Any) {

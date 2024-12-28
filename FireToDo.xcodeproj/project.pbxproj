@@ -10,6 +10,8 @@
 		1123C85E2D1BD28000A6272C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1123C85D2D1BD28000A6272C /* FirebaseAuth */; };
 		1123C8602D1BD28000A6272C /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 1123C85F2D1BD28000A6272C /* FirebaseCore */; };
 		1123C8622D1BD28000A6272C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1123C8612D1BD28000A6272C /* FirebaseFirestore */; };
+		1125E2B02D1FCEB700F54395 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 1125E2AF2D1FCEAE00F54395 /* .gitignore */; };
+		1125E2CD2D20566500F54395 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1125E2CC2D20564E00F54395 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 		1123C8132D1BC30A00A6272C /* FireToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1123C82C2D1BC31400A6272C /* FireToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireToDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1123C8362D1BC31400A6272C /* FireToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FireToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1125E2AF2D1FCEAE00F54395 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1125E2CC2D20564E00F54395 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -97,6 +101,8 @@
 		1123C80A2D1BC30A00A6272C = {
 			isa = PBXGroup;
 			children = (
+				1125E2CC2D20564E00F54395 /* README.md */,
+				1125E2AF2D1FCEAE00F54395 /* .gitignore */,
 				1123C8152D1BC30A00A6272C /* FireToDo */,
 				1123C82F2D1BC31400A6272C /* FireToDoTests */,
 				1123C8392D1BC31400A6272C /* FireToDoUITests */,
@@ -248,6 +254,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1125E2CD2D20566500F54395 /* README.md in Resources */,
+				1125E2B02D1FCEB700F54395 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

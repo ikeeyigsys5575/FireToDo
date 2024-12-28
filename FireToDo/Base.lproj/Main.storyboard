@@ -144,35 +144,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sqY-lu-deb">
-                                <rect key="frame" x="30" y="200" width="333" height="228.66666666666663"/>
+                                <rect key="frame" x="30" y="200" width="333" height="194.66666666666663"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PXq-df-H5h">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Description (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tTy-wx-3gV">
-                                        <rect key="frame" x="0.0" y="44" width="333" height="68"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="68" id="dYT-gO-iZ7"/>
-                                        </constraints>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5y1-YM-pbv">
+                                        <rect key="frame" x="0.0" y="44" width="333" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFq-nl-B38">
-                                        <rect key="frame" x="137" y="121.99999999999999" width="59" height="20.333333333333329"/>
+                                        <rect key="frame" x="137" y="88" width="59" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" maximumValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="pWt-LA-fJH">
-                                        <rect key="frame" x="119.66666666666666" y="152.33333333333331" width="94" height="32"/>
+                                        <rect key="frame" x="119.66666666666666" y="118.33333333333331" width="94" height="32"/>
                                         <connections>
                                             <action selector="priorityStepper:" destination="djl-UY-IeM" eventType="valueChanged" id="CQF-ro-rte"/>
                                         </connections>
                                     </stepper>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apL-Rv-ase">
-                                        <rect key="frame" x="91.666666666666686" y="194.33333333333331" width="150" height="34.333333333333343"/>
+                                        <rect key="frame" x="91.666666666666686" y="160.33333333333331" width="150" height="34.333333333333343"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="pHd-K3-a9O"/>
                                         </constraints>
@@ -185,9 +182,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="PXq-df-H5h" secondAttribute="trailing" id="2v7-EE-BEt"/>
-                                    <constraint firstItem="tTy-wx-3gV" firstAttribute="leading" secondItem="sqY-lu-deb" secondAttribute="leading" id="FgJ-uM-f9B"/>
+                                    <constraint firstAttribute="trailing" secondItem="5y1-YM-pbv" secondAttribute="trailing" id="Gou-Hi-QXu"/>
+                                    <constraint firstAttribute="trailing" secondItem="5y1-YM-pbv" secondAttribute="trailing" id="PRY-LM-iOa"/>
                                     <constraint firstItem="PXq-df-H5h" firstAttribute="leading" secondItem="sqY-lu-deb" secondAttribute="leading" id="kg4-aj-gfJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="tTy-wx-3gV" secondAttribute="trailing" id="l5h-gI-BbN"/>
+                                    <constraint firstItem="5y1-YM-pbv" firstAttribute="leading" secondItem="sqY-lu-deb" secondAttribute="leading" id="tpx-DS-Hdt"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -201,7 +199,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cdm-8M-amZ"/>
                     <connections>
-                        <outlet property="descriptionTextField" destination="tTy-wx-3gV" id="6Ve-JF-zxY"/>
+                        <outlet property="descriptionTextField" destination="5y1-YM-pbv" id="4Fa-uB-nxC"/>
                         <outlet property="priorityLabel" destination="lFq-nl-B38" id="EtY-7O-hol"/>
                         <outlet property="priorityStepper" destination="pWt-LA-fJH" id="8F7-7U-vDK"/>
                         <outlet property="submitButton" destination="apL-Rv-ase" id="HzV-pS-RmE"/>

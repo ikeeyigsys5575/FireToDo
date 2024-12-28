@@ -42,8 +42,8 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var priorityStepper: UIStepper!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var priorityLabel: UILabel!
+    @IBOutlet weak var descriptionTextField: UITextField!
     @IBAction func priorityStepper(_ sender: UIStepper) {
         taskPriority = Int(priorityStepper.value)
         updatePriorityText()
